@@ -13,14 +13,17 @@ Pri metodah razvrščanja v skupine želimo objekte neke množice razvrstiti v s
  
 ## Osnovna shema metode voditeljev
  
- Definiramo začetno množico voditeljev: ```ruby 
- V = V(i)
+ Definiramo začetno množico voditeljev: 
+
+``` 
+V = V(i)
 ponavljaj
     določi razvrstitev *A* tako, da prirediš 
         vsako enoto njej najbližjemu voditelju
     za vsako skupino A(i) iz *A* izračunaj njeno središče A'(i)
         in ga določi za novega voditelja V(i) skupine A(i),
-dokler se voditelji ne ustalijo```
+dokler se voditelji ne ustalijo
+```
 
 Množica enot, ki jih razvrščamo, je končna, zato je končna tudi množica vseh razvrstitev. Tako tudi zgornji postopek sčasoma skonvergira v lokalno optimalno rešitev.
 
