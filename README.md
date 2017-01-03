@@ -11,7 +11,7 @@ Pri metodah razvrščanja v skupine želimo objekte neke množice razvrstiti v s
  
  Metoda voditeljev (k-median) sodi med nehierarhične metode razvrščanja, kar pomeni, da je treba vnaprej podati število skupin iskane razvrstitve (v našem primeru je to število t.i. *k*). Je iteracijska metoda, ki je zelo popularna, saj zmore v skupine razvrščati večje število enot. Postopek začnemo z vnaprej podano množico posameznih skupin - voditeljev. Metoda priredi dane objekte najbližjim voditeljem (tako, da je cena oziroma vsota oddaljenosti objektov do najbližjih voditeljev najmanjša). Nato metoda poišče težišča tako dobljenih skupin - nove voditelje in spet priredi enote najbližjim voditeljem. Ko se nova množice voditeljev ne razlikuje več od množice voditeljev, dobljene korak pred njo, se postopek zaključi.
  
- ## Osnovna shema metode voditeljev
+## Osnovna shema metode voditeljev
  
  Definiramo začetno množico voditeljev: ```ruby 
  V = V(i)
@@ -20,8 +20,7 @@ ponavljaj
         vsako enoto njej najbližjemu voditelju
     za vsako skupino A(i) iz *A* izračunaj njeno središče A'(i)
         in ga določi za novega voditelja V(i) skupine A(i),
-dokler se voditelji ne ustalijo
-```
+dokler se voditelji ne ustalijo```
 
 Množica enot, ki jih razvrščamo, je končna, zato je končna tudi množica vseh razvrstitev. Tako tudi zgornji postopek sčasoma skonvergira v lokalno optimalno rešitev.
 
