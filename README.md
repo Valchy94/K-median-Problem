@@ -15,12 +15,12 @@ Pri metodah razvrščanja v skupine želimo objekte neke množice razvrstiti v s
  
  Definiramo začetno množico voditeljev: 
 
-``` 
+```ruby 
 V = V(i)
 ponavljaj
-    določi razvrstitev *A* tako, da prirediš 
+    določi razvrstitev A tako, da prirediš 
         vsako enoto njej najbližjemu voditelju
-    za vsako skupino A(i) iz *A* izračunaj njeno središče A'(i)
+    za vsako skupino A(i) iz A izračunaj njeno središče A'(i)
         in ga določi za novega voditelja V(i) skupine A(i),
 dokler se voditelji ne ustalijo
 ```
