@@ -1,6 +1,6 @@
 # Metoda k voditeljev z manhattansko razdaljo (k-median)
 
-Avtor: Valentina Gnamuš
+Avtorji: Domen Hadalin, Tim Kordiš, Valentina Gnamuš
 
 Projekt pri predmetu Operacijske raziskave v študijskem letu 2016/17.
 
