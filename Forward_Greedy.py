@@ -4,7 +4,6 @@
 
 #Najprej potrebujemo manhattansko razdaljo:
 def razdalja(x,y):
-    print(x, y)
     if type(x) is not tuple or type(y) is not tuple:
         return abs(y - x)
     if len(x) != len(y):
