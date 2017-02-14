@@ -30,6 +30,9 @@ def cena(S, tocke):
 #Končno definiramo še funkcijo, ki nam reši naš problem:
 def fw_greedy(tocke, k):
     S=[]
+    tocke_st=tocke
+    #print(tocke_st)
+    indeksi=[]
     while len(S)<k:
         a=cena(S+[tocke[0]], tocke[1:])   #nastavimo vrednost cene, če v S dodamo prvo točko
         j=0
@@ -43,8 +46,15 @@ def fw_greedy(tocke, k):
         S=S+[tocke[i]]
         tocke = tocke[:i] + tocke[i+1:]
     a=cena(S, tocke)
-    print("Seznam centrov:",S,"Cena:", a)
+    dol=0
+        while dol<len(tocke_st):   #Da dobimo še seznam indeksev!!
+        if tocke_st[dol] in S:
+            indeksi+=[dol]
+            dol+=1
+        else:
+            dol+=1
+    return indeksi   #rabimo seznam indeksev za algoritem_greedy
 
-fw_greedy([(0,0),(5,6), (21,2), (31,5), (9,10), (5,1), (11,2), (5,10)], 3)
+#fw_greedy([(0,0),(5,6), (21,2), (31,5), (9,10), (5,1), (11,2), (5,10)], 3)
 
 
