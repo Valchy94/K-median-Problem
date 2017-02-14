@@ -44,15 +44,17 @@ def fw_greedy(tocke, k):
                 i=j  #shranila sem indeks trenutnega najboljšega kandidata za center v i
             j+=1
         S=S+[tocke[i]]
+        n = tocke_st.index(tocke[i])  #vrne indeks prve pojavitve elementa tocke[i] v seznamu tocke_st
+        indeksi+=[n]
         tocke = tocke[:i] + tocke[i+1:]
     a=cena(S, tocke)
-    dol=0
-        while dol<len(tocke_st):   #Da dobimo še seznam indeksev!!
-        if tocke_st[dol] in S:
-            indeksi+=[dol]
-            dol+=1
-        else:
-            dol+=1
+    #dol=0
+    #    while dol<len(tocke_st):   #Da dobimo še seznam indeksev!!
+    #    if tocke_st[dol] in S:
+    #        indeksi+=[dol]
+    #        dol+=1
+    #    else:
+    #        dol+=1
     return indeksi   #rabimo seznam indeksev za algoritem_greedy
 
 #fw_greedy([(0,0),(5,6), (21,2), (31,5), (9,10), (5,1), (11,2), (5,10)], 3)
