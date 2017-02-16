@@ -35,6 +35,7 @@ def fw_greedy(tocke, k):
     indeksi=[]
     while len(S)<k:
         a=cena(S+[tocke[0]], tocke[1:])   #nastavimo vrednost cene, če v S dodamo prvo točko
+        i=0
         j=0
         while j<len(tocke):
             S1 = S+[tocke[j]]
